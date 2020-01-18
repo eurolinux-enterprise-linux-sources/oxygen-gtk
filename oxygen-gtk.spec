@@ -2,7 +2,7 @@
 Name:    oxygen-gtk
 Summary: Oxygen GTK theme
 Version: 1.2.0
-Release: 4%{?dist}
+Release: 5%{?dist}
 
 License: LGPLv2+
 Group:   User Interface/Desktops
@@ -30,6 +30,9 @@ Metapackage for Oxygen GTK+2 and GTK+3 themes.
 # blank
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.2.0-5
+- Mass rebuild 2013-12-27
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.2.0-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
