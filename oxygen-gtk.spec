@@ -2,19 +2,22 @@
 Name:    oxygen-gtk
 Summary: Oxygen GTK theme
 Version: 1.2.0
-Release: 5%{?dist}
+Release: 6%{?dist}
 
 License: LGPLv2+
 Group:   User Interface/Desktops
 URL:     https://projects.kde.org/projects/playground/artwork/oxygen-gtk
 
 Requires: oxygen-gtk2
-Requires: oxygen-gtk3
+
+# gtk3 no longer provides the GtkThemeEngine interface used there
+# obsolete oxygen-gtk3 same way as gtk3
+Obsoletes: oxygen-gtk3 < 2:1.4.1
 
 BuildArch: noarch
 
 %description
-Metapackage for Oxygen GTK+2 and GTK+3 themes.
+Metapackage for Oxygen GTK+2 theme.
 
 
 %prep
@@ -30,6 +33,11 @@ Metapackage for Oxygen GTK+2 and GTK+3 themes.
 # blank
 
 %changelog
+
+* Wed Apr 05 2017 Jan Grulich <jgrulich@redhat.com> - 1.2.0-6
+- Drop gtk3 support
+  Resolves: bz#1437788
+
 * Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.2.0-5
 - Mass rebuild 2013-12-27
 
